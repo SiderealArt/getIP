@@ -6,7 +6,7 @@
         flex
         justify-center
         relative
-        bg-hero-pattern bg-cover
+        bg-hero-pattern bg-cover bg-center
         px-4
         pt-8
         pb-32
