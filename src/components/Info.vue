@@ -12,6 +12,7 @@
       pt-8
       pb-12
       rounded-md
+      max-w-2xl
     "
   >
     <div class="flex flex-col">

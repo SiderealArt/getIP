@@ -13,7 +13,9 @@
       "
     >
       <div class="w-full max-w-screen-sm">
-        <h1 class="text-white text-center text-3xl pb-4">What's My IP address?</h1>
+        <h1 class="text-white text-center text-3xl pb-4">
+          What's My IP address?
+        </h1>
         <div class="flex">
           <input
             v-model="query"
@@ -28,7 +30,7 @@
             placeholder="or find other people's IP address here..."
           />
           <i
-          @click="getIPinfo"
+            @click="getIPinfo"
             class="
               fas
               fa-chevron-right
@@ -43,7 +45,7 @@
           ></i>
         </div>
       </div>
-      <Info v-if="info" v-bind:info="info"/>
+      <Info v-if="info" v-bind:info="info" />
     </div>
     <div id="mapid" class="h-full z-10"></div>
   </div>
@@ -79,7 +81,7 @@ export default {
           }
         )
         .addTo(mymap);
-        getIPinfo();
+      getIPinfo();
     });
     const getIPinfo = async () => {
       try {
@@ -87,15 +89,15 @@ export default {
           `https://api.ipdata.co/${query.value}?api-key=a6f751742f3cdc45e555c734e2b150c8f616c07d7f52d10295430ee9`
         );
         const fin = res.data;
-      info.value = {
+        info.value = {
           address: fin.ip,
           city: fin.city,
           timezone: fin.time_zone.offset,
           isp: fin.asn ? fin.asn.name : "",
           lat: fin.latitude,
           lon: fin.longitude,
-        }
-        
+        };
+
         leaflet.marker([fin.latitude, fin.longitude]).addTo(mymap);
         mymap.panTo([fin.latitude, fin.longitude]);
       } catch (e) {
