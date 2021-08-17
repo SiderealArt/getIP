@@ -62,6 +62,7 @@ export default {
   components: { Info },
   setup() {
     let mymap;
+    let a;
     const query = ref("");
     const info = ref(null);
     onMounted(() => {
@@ -100,8 +101,10 @@ export default {
           lat: fin.latitude,
           lon: fin.longitude,
         };
-
-        leaflet.marker([fin.latitude, fin.longitude]).addTo(mymap);
+        if(a){
+          a.remove();
+        }
+        a=leaflet.marker([fin.latitude, fin.longitude]).addTo(mymap);
         mymap.panTo([fin.latitude, fin.longitude]);
       } catch (e) {
         console.log(e);
