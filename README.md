@@ -6,3 +6,4 @@ Based on [this](https://www.youtube.com/watch?v=z-hhIrLqYM0) (Build a IP Trackin
 - disable map interaction
 - auto get ip address after loaded
 - use ipdata's API
+- remove previous marker
