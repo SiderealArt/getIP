@@ -65,7 +65,7 @@ export default {
     const query = ref("");
     const info = ref(null);
     onMounted(() => {
-      mymap = leaflet.map("mapid").setView([22.585, 120.358], 15);
+      mymap = leaflet.map("mapid", {zoomControl: false}).setView([22.585, 120.358], 15);
       leaflet
         .tileLayer(
           "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
@@ -82,6 +82,9 @@ export default {
         )
         .addTo(mymap);
       getIPinfo();
+      mymap._handlers.forEach(function(handler) {
+    handler.disable();
+});
     });
     const getIPinfo = async () => {
       try {
