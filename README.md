@@ -1,24 +1,9 @@
-# ip
+# IP Tracker
 
-## Project setup
-```
-npm install
-```
+Based on [this](https://www.youtube.com/watch?v=z-hhIrLqYM0) (Build a IP Tracking App With Vue 3, Tailwind CSS & Leaflet.js) tutorial by John Komarnicki with several adjustments.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Changes
+- disable map interaction
+- auto get ip address after loaded
+- use ipdata's API
+- remove previous marker
