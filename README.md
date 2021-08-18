@@ -7,3 +7,4 @@ Based on [this](https://www.youtube.com/watch?v=z-hhIrLqYM0) (Build a IP Trackin
 - auto get ip address after loaded
 - use ipdata's API
 - remove previous marker
+- add adblock alert (adblock will block the api)
